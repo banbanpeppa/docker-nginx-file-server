@@ -8,10 +8,14 @@ A Nginx file server based on docker compose, enjoy.
 git clone https://github.com/banbanpeppa/nginx-file-server.git
 ```
 
+generate password file
+```
+docker run --rm -it jess/htpasswd -nb nginx nginxpw > nginx.passwd
+```
+
 start server
 
 ```bash
-cd nginx-file-server
 docker-compose up -d
 ```
 
