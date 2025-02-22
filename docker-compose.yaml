@@ -6,6 +6,7 @@ services:
       - ${STATIC_FILE_PATH}:/usr/share/nginx/html:ro
       - ${NGINX_CONFIG_PATH}:/etc/nginx/conf.d/default.conf:ro
       - ${NGINX_AUTH_PATH}:/opt/nginx/conf/conf.d/nginx.passwd:ro
+      - ${NGINX_MIME_PATH}:/etc/nginx/mime.types:ro
     ports:
       - ${PROXY_PORT:-80}:80
 
